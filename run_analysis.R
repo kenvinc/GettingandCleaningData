@@ -24,12 +24,12 @@ names(Y) <- "activities"
 names(Z) <- "names"
 merge <- cbind(Z, Y, X)
 write.table(merge, "mergeddata.txt")
-# averages sheet
 mysub = unique(Z)[,1]
 col = dim(merge)[2]
 sub = length(unique(Z)[,1])
 act = length(activitylabel[,1])
 answer = merge[1:(sub *act), ]
+# averages sheet
 row = 1
 for (i in 1:sub) {
   for (n in 1:act) {
@@ -40,4 +40,4 @@ for (i in 1:sub) {
     row = row+1
   }
 }
-write.table(answer, "dataaverages.txt")
+write.table(answer, "dataaverages.txt", row.name = FALSE)
