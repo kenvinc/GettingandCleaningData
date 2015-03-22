@@ -1,4 +1,4 @@
-setwd("~/Documents/gettingandcleaningdata/runanalysis/")
+setwd("~/Documents/gettingandcleaningdata/runanalysis/GettingandCleaningData")
 getwd()
 # merge 
 train <- read.table("train/X_train.txt")
