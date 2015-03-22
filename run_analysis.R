@@ -35,9 +35,9 @@ for (i in 1:sub) {
   for (n in 1:act) {
     answer[row, 1] = mysub[i]
     answer[row, 2] = activitylabel[n, 2]
-    template <- merge[merge$subject==i & merge$activities==activitylabel[n, 2], ]
+    template <- merge[merge$names==i & merge$activities==activitylabel[n, 2], ]
     answer[row, 3:col] <- colMeans(template[, 3:col])
     row = row+1
   }
 }
-write.table(answer, "dataaverages.txt", row.name = FALSE)
+write.table(answer, "dataaverages.txt")
