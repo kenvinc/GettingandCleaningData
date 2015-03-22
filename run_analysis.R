@@ -29,7 +29,7 @@ write.table(merge, "mergeddata.txt")
 # averages sheet
 mysub = unique(Z)[,1]
 col = dim(merge)[2]
-sub = length(unique(L)[,1])
+sub = length(unique(Z)[,1])
 act = length(activitylabel[,1])
 answer = merge[1:(sub *act), ]
 row = 1
